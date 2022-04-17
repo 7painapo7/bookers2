@@ -4,41 +4,42 @@
   <title>Bookers2</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <%= stylesheet_pack_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
 
 <body>
-  <header class="navbar navbar-inverse">
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <!-- <div class="row"> -->
-        <nav class='nav navbar-nav navbar-left' >
+        <nav class='nav navbar-brand navbar-nav navbar-left' >
           <span>Bookers</span>
         </nav>
         <nav class="nav navbar-nav navbar-right">
           <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
             <% if user_signed_in? %>
             <!-- ログインしてる時 -->
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to user_path(current_user) do %>
               <span class="glyphicon glyphicon-home" aria-hidden="true"> Home </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to users_path do %>
               <span class="glyphicon glyphicon-user" aria-hidden="true"> Users </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to books_path do %>
               <span class="glyphicon glyphicon-book" aria-hidden="true"> Books </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to destroy_user_session_path, method: :delete do %>
               <span class="glyphicon glyphicon-log-out" aria-hidden="true"> logout </span>
             <% end %>
@@ -46,25 +47,25 @@
 
             <% else %>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to root_path do %>
               <span class="glyphicon glyphicon-home" aria-hidden="true"> Home </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to home_about_path do %>
               <span class="glyphicon glyphicon-link" aria-hidden="true"> About </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to new_user_registration_path do %>
               <span class="glyphicon glyphicon-edit" aria-hidden="true"> sign up </span>
             <% end %>
             </li>
 
-            <li class="nav-list-item">
+            <li class="nav-list-item nav-link text-light">
             <%= link_to user_session_path do %>
               <span class="glyphicon glyphicon-log-in" aria-hidden="true"> login </span>
             <% end %>

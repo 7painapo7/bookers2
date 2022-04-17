@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.navbar-inverse {
+	height: 50px;
+}
+
+.navbar-left {
+	color: white;
+	font-size: 20px;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+a {
+    text-decoration: none;
+	color: #9d9d9d;
+}
+
+ .flash {
+ 	color: #008000;
+ }
+
+ .field {
+    margin-bottom: 10px;
+ }
+
+/*.image1 {*/
+/*background-image: url(image1.jpg);*/
+/*}*/
+/*.image2 {*/
+/*background-image: url(image2.jpg);*/
+/*}*/
+/*.image3 {*/
+/*background-image: url(image3.jpg);*/
+/*}*/
+/*.image4 {*/
+/*background-image: url(image4.jpg);*/
+/*}*/
+/*.image5 {*/
+/*background-image: url(image5.jpg);*/
+/*}*/
+
+#container{
+  height: 500px;
+}
