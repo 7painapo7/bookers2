@@ -1,42 +1,50 @@
 <p>Books#index</p>
-<div class="container">
+<!--<div class="container">-->
 
 <%= render 'users/template', user: @user, book: @book %>
 
 
   <!-- <div class="row"> -->
-    <div class="col-xs-9">
-
+    <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
       <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Title</th>
-            <th>opinion</th>
-            <th></th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <% @books.each do |book| %>
-          <tr>
-            <!-- book.userで紐付けしている -->
-            <td><%= image_tag book.user.get_profile_image(100,100) %></td>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>opinion</th>
+          <th></th>
+        </tr>
+      </thead>
 
-            <td>
-            <%= link_to book_path(book.id) do %>
+      <tbody>
+        <% @books.each do |book| %>
+        <tr>
+          <!-- book.userで紐付けしている -->
+          <td><%= image_tag book.user.get_profile_image(100,100) %></td>
+          <td>
+          <%= link_to book_path(book.id) do %>
             <%= book.title %>
-            <% end %>
-            </td>
-
-            <td><%= book.body %></td>
-
-          </tr>
           <% end %>
-        </tbody>
-      </table>
+          </td>
+          <td><%= book.body %></td>
+        </tr>
+        <% end %>
+      </tbody>
 
-    </div>
-  <!-- </div> -->
+  </table>
 </div>
+</div>
+</div>
+
+<footer>
+  <div class='container mt-5'>
+    <div class='row'>
+      <div class='mx-auto'>
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
