@@ -1,35 +1,44 @@
 <p>Books#show</p>
-<div class="container">
+<!--<div class="container">-->
 
 	<%= render 'users/template', user: @user, book: @book %>
 
-	<div class="col-xs-9">
+	<div class="col-md-8 offset-md-1">
 		<h2>Book detail</h2>
 		<table class='table'>
 
-			<tr>
-				<td><%= image_tag @user.get_profile_image(100,100) %>
-
-	            <br>
-	            <%= link_to user_path(@user.id) do %>
-	            <%= @book_show.user.name %>
-	            <% end %>
-	            </td>
-
-				<td>
-	            <%= link_to book_path(@book_show.id) do %>
+		<tr>
+			<td><%= image_tag @user.get_profile_image(100,100) %><br>
+	    <%= link_to user_path(@user.id) do %>
+	      <%= @book_show.user.name %>
+	    <% end %>
+	    </td>
+			<td>
+	    <%= link_to book_path(@book_show.id) do %>
 				<%= @book_show.title %>
-				<% end %>
-				</td>
+		  <% end %>
+			</td>
 
-				<td><%= @book_show.body %></td>
+			<td><%= @book_show.body %></td>
 
 
-				<% if @user == current_user %>
+			<% if @user == current_user %>
 				<td><%= link_to "Edit", edit_book_path(@book_show.id),class:"btn-sm btn-success" %></td>
 				<td><%= link_to "Destroy", book_path(@book_show.id),class:"btn-sm btn-danger", method: :delete,data: { confirm: '本当に消しますか？' } %></td>
-				<% end %>
-			</tr>
-		</table>
-	</div>
+			<% end %>
+		</tr>
+
+  </table>
 </div>
+</div>
+</div>
+
+<footer>
+  <div class='container mt-5'>
+    <div class='row'>
+      <div class='mx-auto'>
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+</footer>
