@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bookers2</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
@@ -14,8 +13,8 @@
   <header class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <!-- <div class="row"> -->
-        <nav class='nav navbar-brand navbar-nav navbar-left' >
-          <span>Bookers</span>
+        <nav class='nav navbar-brand navbar-nav navbar-left link' >
+          <%= link_to "Bookers", root_path %>
         </nav>
         <nav class="nav navbar-nav navbar-right">
           <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
@@ -41,7 +40,7 @@
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <span><i class="fa fa-sign-out-alt" aria-hidden="true"></i>  logout </span>
+              <span><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Log out </span>
             <% end %>
             </li>
 
@@ -61,13 +60,13 @@
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to new_user_registration_path do %>
-              <span><i class="fa fa-user-plus" aria-hidden="true"></i> sign up </span>
+              <span><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to user_session_path do %>
-              <span><i class="fa fa-sign-in-alt" aria-hidden="true"></i> login </span>
+              <span><i class="fa fa-sign-in-alt" aria-hidden="true"></i> Log in </span>
             <% end %>
             </li>
             <% end %>
