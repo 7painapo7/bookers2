@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  # ログインしてる時だけ許可するアクションをonlyで指定
+  before_action :authenticate_user!, only: [:index,:show,:edit,:create,:update,:destroy]
 
   # 本一蘭と投稿機能を実装
   def index

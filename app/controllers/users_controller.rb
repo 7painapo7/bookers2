@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+	# ログインしてる時だけ許可するアクションをonlyで指定
+	before_action :authenticate_user!, only: [:index,:show,:edit,:update]
+
 	def index
 		@users = User.all
 		@book = Book.new
