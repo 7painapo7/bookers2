@@ -22,25 +22,25 @@
             <!-- ログインしてる時 -->
             <li class="nav-list-item nav-link text-light">
             <%= link_to user_path(current_user) do %>
-              <span><i class="fa fa-home" aria-hidden="true"></i> Home </span>
+              <span><i class="fas fa-home"></i> Home </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to users_path do %>
-              <span><i class="fa fa-users" aria-hidden="true"></i> Users </span>
+              <span><i class="fas fa-users"></i> Users </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to books_path do %>
-              <span><i class="fa fa-book-open" aria-hidden="true"></i>  Books </span>
+              <span><i class="fas fa-book-open"></i>  Books </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to destroy_user_session_path, method: :delete do %>
-              <span><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Log out </span>
+              <span><i class="fas fa-sign-out-alt"></i> Log out </span>
             <% end %>
             </li>
 
@@ -48,25 +48,25 @@
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to root_path do %>
-              <span><i class="fa fa-home" aria-hidden="true"></i> Home </span>
+              <span><i class="fas fa-home"></i> Home </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to home_about_path do %>
-              <span><i class="fa fa-link" aria-hidden="true"></i> About </span>
+              <span><i class="fas fa-link"></i> About </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to new_user_registration_path do %>
-              <span><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up </span>
+              <span><i class="fas fa-user-plus"></i> Sign up </span>
             <% end %>
             </li>
 
             <li class="nav-list-item nav-link text-light">
             <%= link_to user_session_path do %>
-              <span><i class="fa fa-sign-in-alt" aria-hidden="true"></i> Log in </span>
+              <span><i class="fas fa-sign-in-alt"></i> Log in </span>
             <% end %>
             </li>
             <% end %>
